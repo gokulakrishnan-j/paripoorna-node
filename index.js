@@ -10,7 +10,7 @@ app.use(cors())
 app.use(express.json())
 
 
-const MONGO_URL =  "mongodb+srv://gokulakrishnan:Gokul4580@companytask.qvy66kd.mongodb.net"
+const MONGO_URL =  process.env.MONGO_URL
 const client = new MongoClient(MONGO_URL)
 client.connect()
 
