@@ -12,7 +12,7 @@ app.use(express.json())
 
 const MONGO_URL =  process.env.MONGO_URL
 const client = new MongoClient(MONGO_URL)
-client.connect()
+await client.connect()
 
 const PORT = process.env.PORT
 
